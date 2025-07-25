@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>My Virtual Assistance</title>
+        <title>My Virtual Assistant</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- KaTeX CSS -->
@@ -259,15 +259,15 @@ const messages = [
   ...pastMessages,
   { role: "user", content: prompt }
 ];
-if (messages.length > 50) {
-  messages = messages.slice(-30); // keep last 30 only
+if (messages.length > 5) {
+  messages = messages.slice(-2); // keep last 30 only
   saveMemory( messages);
 }
 
   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Authorization": "Bearer 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",
+      "Authorization": "Bearer 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",
       "Content-Type": "application/json",
       "HTTP-Referer": "https://your-app-url.com",
       "X-Title": "OpenRouter Chat App"
